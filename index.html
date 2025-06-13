@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Cấu trúc bài văn Nghị luận Xã hội (với Trợ lý AI)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .infographic-card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid;
+        }
+        .infographic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .icon-bg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            width: 4rem;
+            height: 4rem;
+        }
+        .step-connector {
+            width: 2px;
+            background-color: #cbd5e1;
+            margin: 0 auto;
+        }
+        .gemini-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        /* Loading Spinner */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #6366f1;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-bold text-slate-800">CẤU TRÚC BÀI VĂN NGHỊ LUẬN XÃ HỘI</h1>
+            <p class="mt-2 text-slate-600 text-lg">Dành cho kỳ thi Tuyển sinh 10 - Theo định hướng phát triển năng lực</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="space-y-8">
+
+            <!-- Phần 1: Mở Bài -->
+            <section class="infographic-card" style="border-color: #3b82f6;">
+                <div class="p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+                    <div class="icon-bg bg-blue-100 text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 text-center sm:text-left">
+                        <h2 class="text-2xl font-bold text-blue-800">PHẦN 1: MỞ BÀI (~0.5 điểm)</h2>
+                        <p class="text-slate-500 mt-1 italic">Mục tiêu: Dẫn dắt ngắn gọn, nêu trúng vấn đề</p>
+                        <div class="mt-4 space-y-2 text-left">
+                            <p><strong class="font-semibold text-slate-700">1. Dẫn dắt:</strong> Mở đầu bằng danh ngôn, thực tế đời sống, câu chuyện ngắn... liên quan đến vấn đề (1-2 câu).</p>
+                            <p><strong class="font-semibold text-slate-700">2. Nêu vấn đề:</strong> Trích dẫn hoặc diễn giải yêu cầu của đề, khẳng định tầm quan trọng/tính thời sự của vấn đề (1 câu).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="h-8 step-connector"></div>
+
+            <!-- Phần 2: Thân Bài -->
+            <section class="infographic-card" style="border-color: #f97316;">
+                 <div class="p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+                    <div class="icon-bg bg-orange-100 text-orange-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 text-center sm:text-left">
+                        <h2 class="text-2xl font-bold text-orange-800">PHẦN 2: THÂN BÀI (~3.0 điểm)</h2>
+                        <p class="text-slate-500 mt-1 italic">Mục tiêu: Triển khai các luận điểm một cách logic, thuyết phục</p>
+                    </div>
+                </div>
+                <div class="px-6 sm:px-8 pb-8 space-y-6">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg"><h3 class="font-bold text-lg text-slate-700">▶️ Bước 1: Giải Thích (What?)</h3></div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg"><h3 class="font-bold text-lg text-slate-700">▶️ Bước 2: Phân Tích & Bàn Luận (Why & How?)</h3></div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg"><h3 class="font-bold text-lg text-slate-700">▶️ Bước 3: Phản Biện & Mở Rộng (On the other hand...)</h3></div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg"><h3 class="font-bold text-lg text-slate-700">▶️ Bước 4: Bài Học & Giải Pháp (What should we do?)</h3></div>
+                </div>
+            </section>
+
+            <div class="h-8 step-connector"></div>
+
+            <!-- Phần 3: Kết Bài -->
+            <section class="infographic-card" style="border-color: #16a34a;">
+                <div class="p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+                     <div class="icon-bg bg-green-100 text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.986L5.5 8m7 2v5m0 0v5m0-5h-2.18c-.386 0-.734-.21-.921-.553l-2.481-4.962A2 2 0 016.921 5h2.158c.386 0 .734.21.921.553l2.481 4.962A2 2 0 0114 12h-1.5z" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 text-center sm:text-left">
+                        <h2 class="text-2xl font-bold text-green-800">PHẦN 3: KẾT BÀI (~0.5 điểm)</h2>
+                        <p class="text-slate-500 mt-1 italic">Mục tiêu: Khẳng định lại, tạo dư âm</p>
+                        <div class="mt-4 space-y-2 text-left">
+                            <p><strong class="font-semibold text-slate-700">1. Khẳng định:</strong> Tóm lược, nhấn mạnh lại tầm quan trọng của vấn đề hoặc quan điểm cá nhân (1 câu).</p>
+                            <p><strong class="font-semibold text-slate-700">2. Liên hệ & Thông điệp:</strong> Kết nối với bản thân và gửi gắm thông điệp, lời kêu gọi ý nghĩa đến mọi người (1-2 câu).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Gemini AI Assistant Section -->
+        <section id="gemini-assistant" class="mt-16 p-8 rounded-2xl gemini-section text-white">
+            <div class="text-center">
+                <h2 class="text-3xl sm:text-4xl font-black">Trợ lý Viết văn AI</h2>
+                <p class="mt-2 text-indigo-200 text-lg max-w-2xl mx-auto">Gặp khó khăn với ý tưởng? Nhập chủ đề của bạn và để Gemini giúp bạn xây dựng dàn ý và tìm dẫn chứng!</p>
+            </div>
+            <div class="mt-8 max-w-2xl mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input type="text" id="topic-input" placeholder="Ví dụ: Lòng biết ơn, Trách nhiệm tuổi trẻ,..." class="w-full px-5 py-3 rounded-lg text-slate-900 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition-shadow">
+                    <button id="generate-button" class="w-full sm:w-auto bg-white text-indigo-600 font-bold px-8 py-3 rounded-lg hover:bg-indigo-100 transition-colors flex items-center justify-center gap-2">
+                        ✨ Tạo Dàn Ý
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Result Area -->
+            <div id="result-container" class="mt-8">
+                <!-- Loading indicator and results will be injected here -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12">
+            <p class="text-slate-500">Chúc bạn ôn tập hiệu quả và đạt kết quả cao trong kỳ thi!</p>
+        </footer>
+    </div>
+
+<script>
+    // --- Gemini AI Feature ---
+    const generateButton = document.getElementById('generate-button');
+    const topicInput = document.getElementById('topic-input');
+    const resultContainer = document.getElementById('result-container');
+
+    generateButton.addEventListener('click', handleGeneration);
+    topicInput.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+            handleGeneration();
+        }
+    });
+
+    async function handleGeneration() {
+        const topic = topicInput.value.trim();
+        if (!topic) {
+            resultContainer.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg" role="alert">
+                <strong class="font-bold">Lỗi!</strong>
+                <span class="block sm:inline">Vui lòng nhập một chủ đề để bắt đầu.</span>
+            </div>`;
+            return;
+        }
+
+        // Show loading spinner
+        resultContainer.innerHTML = `<div class="loader"></div> <p class="text-center text-indigo-200">AI đang suy nghĩ, vui lòng chờ trong giây lát...</p>`;
+
+        try {
+            // Construct the prompt for Gemini
+            let chatHistory = [];
+            const prompt = `Bạn là một giáo viên dạy văn xuất sắc. Hãy tạo một dàn ý chi tiết và tìm 2 dẫn chứng tiêu biểu cho bài văn nghị luận xã hội với chủ đề: "${topic}".
+            Hãy trình bày câu trả lời của bạn dưới dạng JSON theo cấu trúc sau. Chỉ trả về JSON, không thêm bất kỳ văn bản nào khác.`;
+
+            // Define the JSON schema for the response
+            const schema = {
+              type: "OBJECT",
+              properties: {
+                "dan_y": {
+                  type: "OBJECT",
+                  properties: {
+                    "mo_bai": { type: "STRING", description: "Gợi ý viết mở bài (khoảng 2-3 câu)." },
+                    "than_bai": { 
+                        type: "OBJECT",
+                        properties: {
+                           "giai_thich": { type: "STRING", description: "Giải thích ngắn gọn về chủ đề." },
+                           "phan_tich_ban_luan": { type: "STRING", description: "Phân tích, bàn luận về các khía cạnh (biểu hiện, ý nghĩa/tác hại)." },
+                           "phan_bien_mo_rong": { type: "STRING", description: "Nêu các ý phản biện và mở rộng vấn đề." },
+                           "bai_hoc_hanh_dong": { type: "STRING", description: "Rút ra bài học nhận thức và hành động cụ thể." }
+                        }
+                    },
+                    "ket_bai": { type: "STRING", description: "Gợi ý viết kết bài (khoảng 2-3 câu)." }
+                  }
+                },
+                "dan_chung": {
+                  type: "ARRAY",
+                  items: {
+                    type: "OBJECT",
+                    properties: {
+                      "tieu_de": { type: "STRING", description: "Tên nhân vật hoặc sự kiện dẫn chứng." },
+                      "mo_ta": { type: "STRING", description: "Mô tả ngắn gọn về dẫn chứng và liên hệ với chủ đề." }
+                    }
+                  }
+                }
+              }
+            };
+            
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            
+            const payload = {
+                contents: chatHistory,
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: schema
+                }
+            };
+
+            const apiKey = "AIzaSyAwTWFjsQs5HwFgX-4LJZGTf0VgILg7jRY"; // API key is handled by the environment
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                 throw new Error(`API Error: ${response.statusText} (status: ${response.status})`);
+            }
+
+            const result = await response.json();
+            
+            let resultText = '';
+            if (result.candidates && result.candidates.length > 0 &&
+                result.candidates[0].content && result.candidates[0].content.parts &&
+                result.candidates[0].content.parts.length > 0) {
+                 resultText = result.candidates[0].content.parts[0].text;
+            } else {
+                 throw new Error("Không nhận được nội dung hợp lệ từ AI.");
+            }
+
+            const parsedResult = JSON.parse(resultText);
+            displayResult(parsedResult, topic);
+
+        } catch (error) {
+            console.error('Error calling Gemini API:', error);
+            resultContainer.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg" role="alert">
+                <strong class="font-bold">Rất tiếc!</strong>
+                <span class="block sm:inline">Đã có lỗi xảy ra. Vui lòng thử lại sau. (${error.message})</span>
+            </div>`;
+        }
+    }
+
+    function displayResult(data, topic) {
+        const { dan_y, dan_chung } = data;
+
+        const danChungHtml = dan_chung.map(dc => `
+            <div class="p-4 bg-indigo-50 rounded-lg">
+                <h4 class="font-bold text-lg text-indigo-800">${dc.tieu_de}</h4>
+                <p class="mt-1 text-slate-700">${dc.mo_ta}</p>
+            </div>
+        `).join('');
+
+        const resultHtml = `
+            <div class="bg-white text-slate-800 rounded-xl p-6 sm:p-8 shadow-2xl">
+                <h3 class="text-2xl font-bold text-center mb-6 text-slate-900">Gợi ý cho chủ đề: "${topic}"</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-xl font-bold text-indigo-700 border-b-2 border-indigo-200 pb-2 mb-3">I. Dàn Ý Chi Tiết</h4>
+                        <div class="space-y-4 pl-4">
+                            <p><strong>Mở bài:</strong> ${dan_y.mo_bai}</p>
+                            <div>
+                                <p><strong>Thân bài:</strong></p>
+                                <ul class="list-disc list-inside ml-4 mt-2 space-y-2 text-slate-600">
+                                    <li><strong>Giải thích:</strong> ${dan_y.than_bai.giai_thich}</li>
+                                    <li><strong>Phân tích, bàn luận:</strong> ${dan_y.than_bai.phan_tich_ban_luan}</li>
+                                    <li><strong>Phản biện, mở rộng:</strong> ${dan_y.than_bai.phan_bien_mo_rong}</li>
+                                    <li><strong>Bài học và hành động:</strong> ${dan_y.than_bai.bai_hoc_hanh_dong}</li>
+                                </ul>
+                            </div>
+                            <p><strong>Kết bài:</strong> ${dan_y.ket_bai}</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-bold text-indigo-700 border-b-2 border-indigo-200 pb-2 mb-3">II. Dẫn Chứng Tham Khảo</h4>
+                        <div class="space-y-4">
+                            ${danChungHtml}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        resultContainer.innerHTML = resultHtml;
+    }
+</script>
+</body>
+</html>
