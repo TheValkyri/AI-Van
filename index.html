@@ -3,50 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infographic: Cấu trúc bài văn Nghị luận Xã hội (với Trợ lý AI)</title>
+    <title>Trợ lý Viết văn AI (Bản nâng cấp 2025)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8;
-        }
-        .infographic-card {
-            background-color: white;
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 5px solid;
-        }
-        .infographic-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .icon-bg {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 9999px;
-            width: 4rem;
-            height: 4rem;
-        }
-        .step-connector {
-            width: 2px;
-            background-color: #cbd5e1;
-            margin: 0 auto;
+            font-family: 'Lexend', sans-serif;
+            background-color: #f3f4f6; /* gray-100 */
         }
         .gemini-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #111827; /* gray-900 */
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+            background-size: 1.5rem 1.5rem;
         }
-        /* Loading Spinner */
         .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #6366f1;
+            width: 48px;
+            height: 48px;
+            border: 5px solid #FFF;
+            border-bottom-color: #4f46e5; /* indigo-600 */
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            display: inline-block;
+            box-sizing: border-box;
             animation: spin 1s linear infinite;
             margin: 20px auto;
         }
@@ -54,208 +33,189 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        .result-card h3 {
+            border-left: 4px solid #4f46e5; /* indigo-600 */
+            padding-left: 1rem;
+        }
+        /* Styling for the new <details> element */
+        details > summary {
+            list-style: none; /* Remove default marker */
+            cursor: pointer;
+        }
+        details > summary::-webkit-details-marker {
+            display: none; /* Remove default marker for Chrome */
+        }
+        .details-marker {
+            transition: transform 0.3s ease-in-out;
+        }
+        details[open] .details-marker {
+            transform: rotate(135deg);
+        }
+        .details-content {
+            border-top: 1px solid #e5e7eb; /* gray-200 */
+            padding: 1.5rem;
+            background-color: #fafafa;
+        }
     </style>
 </head>
 <body class="p-4 sm:p-6 md:p-8">
 
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-6xl mx-auto">
         <!-- Header -->
-        <header class="text-center mb-10">
-            <h1 class="text-3xl sm:text-4xl font-bold text-slate-800">CẤU TRÚC BÀI VĂN NGHỊ LUẬN XÃ HỘI</h1>
-            <p class="mt-2 text-slate-600 text-lg">Dành cho kỳ thi Tuyển sinh 10 - Theo định hướng phát triển năng lực</p>
+        <header class="text-center mb-12">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-800">Cấu Trúc Bài Văn Nghị Luận Xã Hội</h1>
+            <p class="mt-3 text-gray-600 text-lg">Theo định hướng phát triển năng lực mới nhất</p>
         </header>
 
-        <!-- Main Content -->
-        <div class="space-y-8">
-
-            <!-- Phần 1: Mở Bài -->
-            <section class="infographic-card" style="border-color: #3b82f6;">
-                <div class="p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
-                    <div class="icon-bg bg-blue-100 text-blue-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
-                        </svg>
+        <!-- UPDATED: Interactive Main Content -->
+        <div class="grid md:grid-cols-1 gap-8 mb-16">
+            <!-- Mở Bài -->
+            <details class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                <summary class="flex justify-between items-center p-6 border-t-4 border-blue-500">
+                    <div class="text-left">
+                        <h2 class="text-xl font-bold text-gray-800">MỞ BÀI</h2>
+                        <p class="text-gray-500">Dẫn dắt & Nêu vấn đề</p>
                     </div>
-                    <div class="flex-1 text-center sm:text-left">
-                        <h2 class="text-2xl font-bold text-blue-800">PHẦN 1: MỞ BÀI (~0.5 điểm)</h2>
-                        <p class="text-slate-500 mt-1 italic">Mục tiêu: Dẫn dắt ngắn gọn, nêu trúng vấn đề</p>
-                        <div class="mt-4 space-y-2 text-left">
-                            <p><strong class="font-semibold text-slate-700">1. Dẫn dắt:</strong> Mở đầu bằng danh ngôn, thực tế đời sống, câu chuyện ngắn... liên quan đến vấn đề (1-2 câu).</p>
-                            <p><strong class="font-semibold text-slate-700">2. Nêu vấn đề:</strong> Trích dẫn hoặc diễn giải yêu cầu của đề, khẳng định tầm quan trọng/tính thời sự của vấn đề (1 câu).</p>
-                        </div>
-                    </div>
+                    <div class="details-marker text-blue-500 text-3xl font-light">+</div>
+                </summary>
+                <div class="details-content text-left text-gray-700 space-y-3">
+                    <p><strong>Mục tiêu:</strong> Tạo sự hấp dẫn, giới thiệu chính xác vấn đề nghị luận trong khoảng 3-5 câu.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Cách 1: Mở bài trực tiếp:</strong> Giới thiệu thẳng vào vấn đề cần nghị luận. Thích hợp khi cần sự rõ ràng, mạch lạc.</li>
+                        <li><strong>Cách 2: Mở bài gián tiếp:</strong> Dẫn dắt từ một câu chuyện, một câu danh ngôn, một thực tế đời sống để đi đến vấn đề. Cách này giúp bài viết sinh động, lôi cuốn hơn.</li>
+                        <li><strong>Cấu trúc mẫu:</strong> Câu 1 (Dẫn dắt) -> Câu 2 (Nêu vấn đề từ đề bài) -> Câu 3 (Chuyển ý, khẳng định ngắn gọn).</li>
+                    </ul>
                 </div>
-            </section>
-            
-            <div class="h-8 step-connector"></div>
+            </details>
 
-            <!-- Phần 2: Thân Bài -->
-            <section class="infographic-card" style="border-color: #f97316;">
-                 <div class="p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
-                    <div class="icon-bg bg-orange-100 text-orange-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
+            <!-- Thân Bài -->
+            <details class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                <summary class="flex justify-between items-center p-6 border-t-4 border-orange-500">
+                    <div class="text-left">
+                        <h2 class="text-xl font-bold text-gray-800">THÂN BÀI</h2>
+                        <p class="text-gray-500">Giải thích, Phân tích, Phản biện</p>
                     </div>
-                    <div class="flex-1 text-center sm:text-left">
-                        <h2 class="text-2xl font-bold text-orange-800">PHẦN 2: THÂN BÀI (~3.0 điểm)</h2>
-                        <p class="text-slate-500 mt-1 italic">Mục tiêu: Triển khai các luận điểm một cách logic, thuyết phục</p>
-                    </div>
+                     <div class="details-marker text-orange-500 text-3xl font-light">+</div>
+                </summary>
+                <div class="details-content text-left text-gray-700 space-y-4">
+                     <p><strong>Mục tiêu:</strong> Triển khai các luận điểm một cách logic, thuyết phục, có dẫn chứng và chiều sâu.</p>
+                     <div class="space-y-3 pl-4 border-l-2 border-orange-200">
+                        <p><strong>▶️ Bước 1: Giải thích:</strong> Làm rõ các khái niệm, từ khóa, và ý nghĩa của toàn bộ vấn đề. Trả lời câu hỏi: "Vấn đề này là gì?".</p>
+                        <p><strong>▶️ Bước 2: Phân tích & Bàn luận:</strong> Đây là phần trọng tâm. Cần nêu rõ biểu hiện trong đời sống, phân tích nguyên nhân (chủ quan, khách quan), và chỉ ra ý nghĩa/tác hại của vấn đề. Cần có ít nhất 2 dẫn chứng tiêu biểu, xác thực.</p>
+                        <p><strong>▶️ Bước 3: Phản biện & Mở rộng:</strong> Lật lại vấn đề, phê phán các biểu hiện sai lệch, nhìn từ nhiều góc độ để bài viết có chiều sâu, tránh phiến diện.</p>
+                        <p><strong>▶️ Bước 4: Bài học nhận thức & Hành động:</strong> Rút ra bài học cho bản thân và đề xuất các giải pháp cụ thể, khả thi. Trả lời câu hỏi: "Chúng ta cần làm gì?".</p>
+                     </div>
                 </div>
-                <div class="px-6 sm:px-8 pb-8 space-y-6">
-                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg"><h3 class="font-bold text-lg text-slate-700">▶️ Bước 1: Giải Thích (What?)</h3></div>
-                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg"><h3 class="font-bold text-lg text-slate-700">▶️ Bước 2: Phân Tích & Bàn Luận (Why & How?)</h3></div>
-                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg"><h3 class="font-bold text-lg text-slate-700">▶️ Bước 3: Phản Biện & Mở Rộng (On the other hand...)</h3></div>
-                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg"><h3 class="font-bold text-lg text-slate-700">▶️ Bước 4: Bài Học & Giải Pháp (What should we do?)</h3></div>
-                </div>
-            </section>
+            </details>
 
-            <div class="h-8 step-connector"></div>
-
-            <!-- Phần 3: Kết Bài -->
-            <section class="infographic-card" style="border-color: #16a34a;">
-                <div class="p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
-                     <div class="icon-bg bg-green-100 text-green-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                           <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.986L5.5 8m7 2v5m0 0v5m0-5h-2.18c-.386 0-.734-.21-.921-.553l-2.481-4.962A2 2 0 016.921 5h2.158c.386 0 .734.21.921.553l2.481 4.962A2 2 0 0114 12h-1.5z" />
-                        </svg>
+            <!-- Kết Bài -->
+            <details class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                <summary class="flex justify-between items-center p-6 border-t-4 border-green-500">
+                    <div class="text-left">
+                        <h2 class="text-xl font-bold text-gray-800">KẾT BÀI</h2>
+                        <p class="text-gray-500">Khẳng định & Thông điệp</p>
                     </div>
-                    <div class="flex-1 text-center sm:text-left">
-                        <h2 class="text-2xl font-bold text-green-800">PHẦN 3: KẾT BÀI (~0.5 điểm)</h2>
-                        <p class="text-slate-500 mt-1 italic">Mục tiêu: Khẳng định lại, tạo dư âm</p>
-                        <div class="mt-4 space-y-2 text-left">
-                            <p><strong class="font-semibold text-slate-700">1. Khẳng định:</strong> Tóm lược, nhấn mạnh lại tầm quan trọng của vấn đề hoặc quan điểm cá nhân (1 câu).</p>
-                            <p><strong class="font-semibold text-slate-700">2. Liên hệ & Thông điệp:</strong> Kết nối với bản thân và gửi gắm thông điệp, lời kêu gọi ý nghĩa đến mọi người (1-2 câu).</p>
-                        </div>
-                    </div>
+                    <div class="details-marker text-green-500 text-3xl font-light">+</div>
+                </summary>
+                <div class="details-content text-left text-gray-700 space-y-3">
+                    <p><strong>Mục tiêu:</strong> Tóm lược lại vấn đề, tạo dư âm và lan tỏa thông điệp ý nghĩa trong khoảng 2-4 câu.</p>
+                     <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Bước 1: Khẳng định lại vấn đề:</strong> Dùng một câu ngắn gọn để tóm lược và nhấn mạnh lại tầm quan trọng của vấn đề đã bàn luận.</li>
+                        <li><strong>Bước 2: Liên hệ & Gửi thông điệp:</strong> Nêu hành động của bản thân và gửi gắm một lời kêu gọi, một thông điệp tích cực đến mọi người để kết thúc bài viết một cách trọn vẹn.</li>
+                    </ul>
                 </div>
-            </section>
+            </details>
         </div>
 
         <!-- Gemini AI Assistant Section -->
-        <section id="gemini-assistant" class="mt-16 p-8 rounded-2xl gemini-section text-white">
+        <section id="gemini-assistant" class="p-8 md:p-12 rounded-2xl gemini-section text-white shadow-2xl">
             <div class="text-center">
-                <h2 class="text-3xl sm:text-4xl font-black">Trợ lý Viết văn AI</h2>
-                <p class="mt-2 text-indigo-200 text-lg max-w-2xl mx-auto">Gặp khó khăn với ý tưởng? Nhập chủ đề của bạn và để Gemini giúp bạn xây dựng dàn ý và tìm dẫn chứng!</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Trợ lý Viết văn AI 2025</h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">Nhận ngay dàn ý chi tiết và những dẫn chứng đắt giá, cập nhật đến năm 2025 chỉ trong vài giây!</p>
             </div>
-            <div class="mt-8 max-w-2xl mx-auto">
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <input type="text" id="topic-input" placeholder="Ví dụ: Lòng biết ơn, Trách nhiệm tuổi trẻ,..." class="w-full px-5 py-3 rounded-lg text-slate-900 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition-shadow">
-                    <button id="generate-button" class="w-full sm:w-auto bg-white text-indigo-600 font-bold px-8 py-3 rounded-lg hover:bg-indigo-100 transition-colors flex items-center justify-center gap-2">
-                        ✨ Tạo Dàn Ý
+            <div class="mt-10 max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <div>
+                         <label for="api-key-input" class="block text-sm font-semibold text-gray-300 mb-2">Google AI API Key:</label>
+                         <input type="password" id="api-key-input" placeholder="Dán API Key của bạn vào đây để kích hoạt" class="w-full px-5 py-3 rounded-lg text-gray-900 bg-gray-200 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition-all placeholder:text-gray-500">
+                    </div>
+                     <div>
+                         <label for="topic-input" class="block text-sm font-semibold text-gray-300 mb-2">Nhập chủ đề nghị luận:</label>
+                         <input type="text" id="topic-input" placeholder="Ví dụ: Lòng dũng cảm, Sức mạnh của sự tử tế,..." class="w-full px-5 py-3 rounded-lg text-gray-900 bg-gray-200 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition-all placeholder:text-gray-500">
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <button id="generate-button" class="w-full bg-indigo-600 font-bold px-8 py-4 rounded-lg hover:bg-indigo-500 transition-colors duration-300 flex items-center justify-center gap-3 text-lg transform hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                        Tạo Dàn Ý Siêu Tốc
                     </button>
                 </div>
             </div>
             
-            <!-- Result Area -->
-            <div id="result-container" class="mt-8">
-                <!-- Loading indicator and results will be injected here -->
-            </div>
+            <div id="result-container" class="mt-12"></div>
         </section>
 
         <!-- Footer -->
-        <footer class="text-center mt-12">
-            <p class="text-slate-500">Chúc bạn ôn tập hiệu quả và đạt kết quả cao trong kỳ thi!</p>
-        </footer>
+        <footer class="text-center mt-12"><p class="text-gray-500">Một sản phẩm được nâng cấp bởi AI. Chúc bạn thi tốt!</p></footer>
     </div>
 
 <script>
-    // --- Gemini AI Feature ---
     const generateButton = document.getElementById('generate-button');
     const topicInput = document.getElementById('topic-input');
+    const apiKeyInput = document.getElementById('api-key-input');
     const resultContainer = document.getElementById('result-container');
 
     generateButton.addEventListener('click', handleGeneration);
-    topicInput.addEventListener('keyup', (event) => {
-        if (event.key === 'Enter') {
-            handleGeneration();
-        }
+    [topicInput, apiKeyInput].forEach(input => {
+        input.addEventListener('keyup', (event) => { if (event.key === 'Enter') handleGeneration(); });
     });
 
     async function handleGeneration() {
         const topic = topicInput.value.trim();
-        if (!topic) {
-            resultContainer.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg" role="alert">
-                <strong class="font-bold">Lỗi!</strong>
-                <span class="block sm:inline">Vui lòng nhập một chủ đề để bắt đầu.</span>
-            </div>`;
+        const apiKey = apiKeyInput.value.trim();
+
+        if (!apiKey) {
+            displayError("Vui lòng nhập API Key của bạn để sử dụng tính năng này.");
             return;
         }
 
-        // Show loading spinner
-        resultContainer.innerHTML = `<div class="loader"></div> <p class="text-center text-indigo-200">AI đang suy nghĩ, vui lòng chờ trong giây lát...</p>`;
+        if (!topic) {
+            displayError("Vui lòng nhập một chủ đề để bắt đầu.");
+            return;
+        }
+
+        resultContainer.innerHTML = `<div class="loader"></div> <p class="text-center text-gray-300">AI đang phân tích chủ đề và tìm dẫn chứng mới nhất, vui lòng chờ...</p>`;
 
         try {
-            // Construct the prompt for Gemini
-            let chatHistory = [];
-            const prompt = `Bạn là một giáo viên dạy văn xuất sắc. Hãy tạo một dàn ý chi tiết và tìm 2 dẫn chứng tiêu biểu cho bài văn nghị luận xã hội với chủ đề: "${topic}".
-            Hãy trình bày câu trả lời của bạn dưới dạng JSON theo cấu trúc sau. Chỉ trả về JSON, không thêm bất kỳ văn bản nào khác.`;
+            const prompt = `Bạn là một chuyên gia phân tích xã hội và giáo viên văn xuất sắc. Hãy tạo một dàn ý chi tiết cho bài văn nghị luận xã hội với chủ đề: "${topic}". 
+            - Phần Dàn Ý cần đầy đủ 3 phần Mở-Thân-Kết.
+            - Phần Dẫn Chứng: Hãy tìm 2-3 ví dụ tiêu biểu, đa dạng (từ đời sống, lịch sử, các sự kiện xã hội) và cập nhật các sự kiện đến năm 2024-2025 để làm minh họa. Mỗi dẫn chứng cần được phân tích thành các gạch đầu dòng rõ ràng.
+            Hãy trả về kết quả dưới dạng JSON theo cấu trúc sau, không thêm bất kỳ văn bản nào khác.`;
 
-            // Define the JSON schema for the response
             const schema = {
               type: "OBJECT",
               properties: {
-                "dan_y": {
-                  type: "OBJECT",
-                  properties: {
-                    "mo_bai": { type: "STRING", description: "Gợi ý viết mở bài (khoảng 2-3 câu)." },
-                    "than_bai": { 
-                        type: "OBJECT",
-                        properties: {
-                           "giai_thich": { type: "STRING", description: "Giải thích ngắn gọn về chủ đề." },
-                           "phan_tich_ban_luan": { type: "STRING", description: "Phân tích, bàn luận về các khía cạnh (biểu hiện, ý nghĩa/tác hại)." },
-                           "phan_bien_mo_rong": { type: "STRING", description: "Nêu các ý phản biện và mở rộng vấn đề." },
-                           "bai_hoc_hanh_dong": { type: "STRING", description: "Rút ra bài học nhận thức và hành động cụ thể." }
-                        }
-                    },
-                    "ket_bai": { type: "STRING", description: "Gợi ý viết kết bài (khoảng 2-3 câu)." }
-                  }
-                },
-                "dan_chung": {
-                  type: "ARRAY",
-                  items: {
-                    type: "OBJECT",
-                    properties: {
-                      "tieu_de": { type: "STRING", description: "Tên nhân vật hoặc sự kiện dẫn chứng." },
-                      "mo_ta": { type: "STRING", description: "Mô tả ngắn gọn về dẫn chứng và liên hệ với chủ đề." }
-                    }
-                  }
-                }
+                "dan_y": { type: "OBJECT", properties: { "mo_bai": { type: "STRING" }, "than_bai": { type: "OBJECT", properties: { "giai_thich": { type: "STRING" }, "phan_tich_ban_luan": { type: "STRING" }, "phan_bien_mo_rong": { type: "STRING" }, "bai_hoc_hanh_dong": { type: "STRING" } } }, "ket_bai": { type: "STRING" } } },
+                "dan_chung": { type: "ARRAY", items: { type: "OBJECT", properties: { "tieu_de": { type: "STRING" }, "y_chinh": { type: "ARRAY", items: {type: "STRING"}} } } }
               }
             };
             
-            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-            
-            const payload = {
-                contents: chatHistory,
-                generationConfig: {
-                    responseMimeType: "application/json",
-                    responseSchema: schema
-                }
-            };
-
-            const apiKey = "AIzaSyAwTWFjsQs5HwFgX-4LJZGTf0VgILg7jRY"; // API key is handled by the environment
+            const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }], generationConfig: { responseMimeType: "application/json", responseSchema: schema } };
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
+            const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
 
             if (!response.ok) {
-                 throw new Error(`API Error: ${response.statusText} (status: ${response.status})`);
+                throw new Error(`API Error: ${response.statusText} (status: ${response.status})`);
             }
 
             const result = await response.json();
             
             let resultText = '';
-            if (result.candidates && result.candidates.length > 0 &&
-                result.candidates[0].content && result.candidates[0].content.parts &&
-                result.candidates[0].content.parts.length > 0) {
+            if (result.candidates && result.candidates.length > 0 && result.candidates[0].content?.parts?.length > 0) {
                  resultText = result.candidates[0].content.parts[0].text;
             } else {
-                 throw new Error("Không nhận được nội dung hợp lệ từ AI.");
+                 throw new Error("AI không thể tạo dàn ý cho chủ đề này. Vui lòng thử lại với một chủ đề khác.");
             }
 
             const parsedResult = JSON.parse(resultText);
@@ -263,55 +223,64 @@
 
         } catch (error) {
             console.error('Error calling Gemini API:', error);
-            resultContainer.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg" role="alert">
-                <strong class="font-bold">Rất tiếc!</strong>
-                <span class="block sm:inline">Đã có lỗi xảy ra. Vui lòng thử lại sau. (${error.message})</span>
-            </div>`;
+            displayError(`Đã có lỗi xảy ra. Vui lòng kiểm tra lại API Key và thử lại. (${error.message})`);
         }
     }
 
+    function displayError(message) {
+         resultContainer.innerHTML = `<div class="bg-red-900 border border-red-700 text-red-200 px-4 py-3 rounded-lg" role="alert">
+            <strong class="font-bold">Rất tiếc!</strong>
+            <span class="block sm:inline">${message}</span>
+        </div>`;
+    }
+
     function displayResult(data, topic) {
-        const { dan_y, dan_chung } = data;
+        const dan_y = data.dan_y || {};
+        const than_bai = dan_y.than_bai || {};
+        const dan_chung = data.dan_chung || [];
 
         const danChungHtml = dan_chung.map(dc => `
-            <div class="p-4 bg-indigo-50 rounded-lg">
-                <h4 class="font-bold text-lg text-indigo-800">${dc.tieu_de}</h4>
-                <p class="mt-1 text-slate-700">${dc.mo_ta}</p>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <h4 class="font-bold text-lg text-indigo-400">${dc.tieu_de || 'Không có tiêu đề'}</h4>
+                <ul class="mt-3 space-y-2">
+                    ${(dc.y_chinh || []).map(yc => `
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <span class="text-gray-300">${yc}</span>
+                        </li>
+                    `).join('')}
+                </ul>
             </div>
-        `).join('');
+        `).join('<div class="my-6 border-t border-gray-700"></div>');
+
+        const danChungSection = dan_chung.length > 0 ? `
+            <div class="result-card bg-gray-900/50 p-6 md:p-8 rounded-xl backdrop-blur-sm border border-gray-700">
+                <h3 class="text-2xl font-bold mb-6 text-white">Dẫn Chứng Tiêu Biểu (Cập nhật 2025)</h3>
+                ${danChungHtml}
+            </div>
+        ` : '';
 
         const resultHtml = `
-            <div class="bg-white text-slate-800 rounded-xl p-6 sm:p-8 shadow-2xl">
-                <h3 class="text-2xl font-bold text-center mb-6 text-slate-900">Gợi ý cho chủ đề: "${topic}"</h3>
-                
-                <div class="space-y-6">
-                    <div>
-                        <h4 class="text-xl font-bold text-indigo-700 border-b-2 border-indigo-200 pb-2 mb-3">I. Dàn Ý Chi Tiết</h4>
-                        <div class="space-y-4 pl-4">
-                            <p><strong>Mở bài:</strong> ${dan_y.mo_bai}</p>
-                            <div>
-                                <p><strong>Thân bài:</strong></p>
-                                <ul class="list-disc list-inside ml-4 mt-2 space-y-2 text-slate-600">
-                                    <li><strong>Giải thích:</strong> ${dan_y.than_bai.giai_thich}</li>
-                                    <li><strong>Phân tích, bàn luận:</strong> ${dan_y.than_bai.phan_tich_ban_luan}</li>
-                                    <li><strong>Phản biện, mở rộng:</strong> ${dan_y.than_bai.phan_bien_mo_rong}</li>
-                                    <li><strong>Bài học và hành động:</strong> ${dan_y.than_bai.bai_hoc_hanh_dong}</li>
-                                </ul>
-                            </div>
-                            <p><strong>Kết bài:</strong> ${dan_y.ket_bai}</p>
+            <div class="space-y-8">
+                <div class="result-card bg-gray-900/50 p-6 md:p-8 rounded-xl backdrop-blur-sm border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-6 text-white">Dàn Ý Chi Tiết cho: "${topic}"</h3>
+                    <div class="space-y-4 text-gray-300">
+                        <p><strong>Mở bài:</strong> ${dan_y.mo_bai || 'Chưa có gợi ý.'}</p>
+                        <div>
+                            <p><strong>Thân bài:</strong></p>
+                            <ul class="list-disc list-inside ml-4 mt-2 space-y-2">
+                                <li><strong>Giải thích:</strong> ${than_bai.giai_thich || 'Chưa có gợi ý.'}</li>
+                                <li><strong>Phân tích, bàn luận:</strong> ${than_bai.phan_tich_ban_luan || 'Chưa có gợi ý.'}</li>
+                                <li><strong>Phản biện, mở rộng:</strong> ${than_bai.phan_bien_mo_rong || 'Chưa có gợi ý.'}</li>
+                                <li><strong>Bài học và hành động:</strong> ${than_bai.bai_hoc_hanh_dong || 'Chưa có gợi ý.'}</li>
+                            </ul>
                         </div>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xl font-bold text-indigo-700 border-b-2 border-indigo-200 pb-2 mb-3">II. Dẫn Chứng Tham Khảo</h4>
-                        <div class="space-y-4">
-                            ${danChungHtml}
-                        </div>
+                        <p><strong>Kết bài:</strong> ${dan_y.ket_bai || 'Chưa có gợi ý.'}</p>
                     </div>
                 </div>
+                ${danChungSection}
             </div>
         `;
-
         resultContainer.innerHTML = resultHtml;
     }
 </script>
