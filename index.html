@@ -37,13 +37,12 @@
             border-left: 4px solid #4f46e5; /* indigo-600 */
             padding-left: 1rem;
         }
-        /* Styling for the new <details> element */
         details > summary {
-            list-style: none; /* Remove default marker */
+            list-style: none;
             cursor: pointer;
         }
         details > summary::-webkit-details-marker {
-            display: none; /* Remove default marker for Chrome */
+            display: none;
         }
         .details-marker {
             transition: transform 0.3s ease-in-out;
@@ -52,7 +51,7 @@
             transform: rotate(135deg);
         }
         .details-content {
-            border-top: 1px solid #e5e7eb; /* gray-200 */
+            border-top: 1px solid #e5e7eb;
             padding: 1.5rem;
             background-color: #fafafa;
         }
@@ -67,15 +66,11 @@
             <p class="mt-3 text-gray-600 text-lg">Theo định hướng phát triển năng lực mới nhất</p>
         </header>
 
-        <!-- UPDATED: Interactive Main Content -->
+        <!-- Interactive Main Content -->
         <div class="grid md:grid-cols-1 gap-8 mb-16">
-            <!-- Mở Bài -->
             <details class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
                 <summary class="flex justify-between items-center p-6 border-t-4 border-blue-500">
-                    <div class="text-left">
-                        <h2 class="text-xl font-bold text-gray-800">MỞ BÀI</h2>
-                        <p class="text-gray-500">Dẫn dắt & Nêu vấn đề</p>
-                    </div>
+                    <div class="text-left"><h2 class="text-xl font-bold text-gray-800">MỞ BÀI</h2><p class="text-gray-500">Dẫn dắt & Nêu vấn đề</p></div>
                     <div class="details-marker text-blue-500 text-3xl font-light">+</div>
                 </summary>
                 <div class="details-content text-left text-gray-700 space-y-3">
@@ -87,14 +82,9 @@
                     </ul>
                 </div>
             </details>
-
-            <!-- Thân Bài -->
             <details class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
                 <summary class="flex justify-between items-center p-6 border-t-4 border-orange-500">
-                    <div class="text-left">
-                        <h2 class="text-xl font-bold text-gray-800">THÂN BÀI</h2>
-                        <p class="text-gray-500">Giải thích, Phân tích, Phản biện</p>
-                    </div>
+                    <div class="text-left"><h2 class="text-xl font-bold text-gray-800">THÂN BÀI</h2><p class="text-gray-500">Giải thích, Phân tích, Phản biện</p></div>
                      <div class="details-marker text-orange-500 text-3xl font-light">+</div>
                 </summary>
                 <div class="details-content text-left text-gray-700 space-y-4">
@@ -107,14 +97,9 @@
                      </div>
                 </div>
             </details>
-
-            <!-- Kết Bài -->
             <details class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
                 <summary class="flex justify-between items-center p-6 border-t-4 border-green-500">
-                    <div class="text-left">
-                        <h2 class="text-xl font-bold text-gray-800">KẾT BÀI</h2>
-                        <p class="text-gray-500">Khẳng định & Thông điệp</p>
-                    </div>
+                    <div class="text-left"><h2 class="text-xl font-bold text-gray-800">KẾT BÀI</h2><p class="text-gray-500">Khẳng định & Thông điệp</p></div>
                     <div class="details-marker text-green-500 text-3xl font-light">+</div>
                 </summary>
                 <div class="details-content text-left text-gray-700 space-y-3">
@@ -170,6 +155,52 @@
         input.addEventListener('keyup', (event) => { if (event.key === 'Enter') handleGeneration(); });
     });
 
+    // NEW: Function to attempt API call with retries
+    async function fetchWithRetry(apiUrl, payload, retries = 2) {
+        for (let i = 0; i < retries; i++) {
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    // Don't retry on client-side errors like 4xx
+                    if (response.status >= 400 && response.status < 500) {
+                        throw new Error(`API Error: ${response.statusText} (status: ${response.status})`);
+                    }
+                    // For server-side errors 5xx, retry
+                    if (i === retries - 1) throw new Error(`API Error: ${response.statusText} (status: ${response.status})`);
+                    continue; // Go to the next retry
+                }
+
+                const result = await response.json();
+                
+                let resultText = '';
+                if (result.candidates && result.candidates.length > 0 && result.candidates[0].content?.parts?.length > 0) {
+                     resultText = result.candidates[0].content.parts[0].text;
+                } else {
+                     throw new Error("AI không thể tạo dàn ý cho chủ đề này. Vui lòng thử lại với một chủ đề khác.");
+                }
+
+                // Try to parse the JSON, this is where "Unterminated string" happens
+                const parsedResult = JSON.parse(resultText);
+                return parsedResult; // Success! Exit the loop and return the result.
+
+            } catch (error) {
+                console.warn(`Attempt ${i + 1} failed:`, error.message);
+                if (i === retries - 1) {
+                    // If this was the last retry, re-throw the error to be caught by the main handler
+                    throw error;
+                }
+                // Optional: wait a bit before retrying
+                await new Promise(res => setTimeout(res, 500));
+            }
+        }
+    }
+
+
     async function handleGeneration() {
         const topic = topicInput.value.trim();
         const apiKey = apiKeyInput.value.trim();
@@ -178,13 +209,12 @@
             displayError("Vui lòng nhập API Key của bạn để sử dụng tính năng này.");
             return;
         }
-
         if (!topic) {
             displayError("Vui lòng nhập một chủ đề để bắt đầu.");
             return;
         }
 
-        resultContainer.innerHTML = `<div class="loader"></div> <p class="text-center text-gray-300">AI đang phân tích chủ đề và tìm dẫn chứng mới nhất, vui lòng chờ...</p>`;
+        resultContainer.innerHTML = `<div class="loader"></div> <p class="text-center text-gray-300">AI đang phân tích và thử tạo dàn ý, vui lòng chờ...</p>`;
 
         try {
             const prompt = `Bạn là một chuyên gia phân tích xã hội và giáo viên văn xuất sắc. Hãy tạo một dàn ý chi tiết cho bài văn nghị luận xã hội với chủ đề: "${topic}". 
@@ -203,27 +233,14 @@
             const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }], generationConfig: { responseMimeType: "application/json", responseSchema: schema } };
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
-            const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-
-            if (!response.ok) {
-                throw new Error(`API Error: ${response.statusText} (status: ${response.status})`);
-            }
-
-            const result = await response.json();
+            // Use the new fetchWithRetry function
+            const finalResult = await fetchWithRetry(apiUrl, payload);
             
-            let resultText = '';
-            if (result.candidates && result.candidates.length > 0 && result.candidates[0].content?.parts?.length > 0) {
-                 resultText = result.candidates[0].content.parts[0].text;
-            } else {
-                 throw new Error("AI không thể tạo dàn ý cho chủ đề này. Vui lòng thử lại với một chủ đề khác.");
-            }
-
-            const parsedResult = JSON.parse(resultText);
-            displayResult(parsedResult, topic);
+            displayResult(finalResult, topic);
 
         } catch (error) {
-            console.error('Error calling Gemini API:', error);
-            displayError(`Đã có lỗi xảy ra. Vui lòng kiểm tra lại API Key và thử lại. (${error.message})`);
+            console.error('Final error after retries:', error);
+            displayError(`Đã có lỗi xảy ra sau vài lần thử. Vui lòng kiểm tra lại API Key và thử lại. (${error.message})`);
         }
     }
 
